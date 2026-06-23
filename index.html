@@ -1,0 +1,922 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taste_bite </title>
+    <!-- Google font link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    html,
+    body {
+        width: 100%;
+        height: 100%;
+
+    }
+
+    #logo {
+        display: flex;
+        justify-content: space-between;
+        margin: 15px 40px;
+    }
+
+    li a {
+        text-decoration: none;
+        color: black;
+    }
+
+    li a:hover {
+        text-decoration: underline;
+        margin-bottom: 30px;
+        color: orangered;
+    }
+
+    .nav ul {
+        display: flex;
+        gap: 30px;
+        padding-top: 12px;
+        list-style: none;
+        text-transform: capitalize;
+        font-size: 20px;
+        font-family: poppins, sans-serif;
+        font-weight: 400;
+        cursor: pointer;
+    }
+
+    .btn1 {
+        padding: 12px 24px;
+        margin: 5px;
+        border: 1px solid rgb(180, 177, 177);
+        border-radius: 10px;
+        font-size: 16px;
+        font-weight: 400;
+        font-family: poppins, sans-serif;
+        cursor: pointer;
+        background-color: white;
+        text-transform: capitalize;
+        font-weight: 500;
+    }
+
+    .btn2 {
+        color: white;
+        font-weight: 400;
+        background-color: #da5c08fd;
+        font-family: poppins, sans-serif;
+        border: 1px solid rgb(238, 236, 236);
+        border-radius: 10px;
+        font-size: 16px;
+        padding: 12px 24px;
+        cursor: pointer;
+        text-transform: capitalize;
+
+        img {
+            position: relative;
+        }
+    }
+
+    .Explore {
+        position: absolute;
+        top:25%;
+        left: 1%;
+    }
+
+    .Explore h1 {
+        font-family: Poppins, sans-serif;
+        font-weight: 600;
+        /* text-transform: capitalize; */
+        font-size: 60px;
+        margin-left: 40px;
+    }
+
+    .Explore p {
+        margin-left: 40px;
+        font-size: 25px;
+        padding-bottom: 50px;
+        font-family: poppins, sans-serif;
+        font-weight: 400;
+    }
+
+    .explore {
+        margin-left: 40px;
+        padding: 10px 25px;
+        border-radius: 10px;
+        /* padding-top: 20px; */
+        text-transform: capitalize;
+        font-size: 18px;
+        border: 1px solid rgb(233, 226, 226);
+        color: white;
+        cursor: pointer;
+        font-weight: 300;
+        z-index: 10px;
+        background-color: #da5c08fd;
+        font-family: poppins, sans-serif;
+    }
+    #featuree {
+        margin: 10px;
+    }
+
+    #featuree h2 {
+        padding-bottom: 20px;
+        font-family: poppins, sans-serif;
+        font-weight: 600;
+        font-size: 25px;
+        padding-left: 30px;
+    }
+
+    .featuress {
+        display: flex;
+
+    }
+
+    .card11 {
+        width: 100%;
+        gap: 30px;
+        background: white;
+        border-radius: 10px;
+        text-align: center;
+        /* padding-left: 10px; */
+        font-size: 18px;
+         /* border: 2px solid rgb(180, 178, 178); */
+        overflow: hidden;
+        /* box-shadow: 0 4px 15px rgba(0,0,0,0.2); */
+        /* border: 5px solid black; */
+    }
+
+    .card1 img {
+        border-radius: 10px;
+        padding-bottom: 15px;
+    }
+
+    .card_contentt h3 {
+        font-family: poppins, sans-serif;
+        font-weight: 600;
+        padding-left: 5px;
+        font-size: 24px;
+    }
+
+    .card_content p {
+        font-family: poppins, sans-serif;
+        font-size: 14px;
+        font-weight: 300;
+        letter-spacing: 1px;
+        padding-left: 5px;
+    }
+
+    .cardsss {
+        display: flex;
+        width: 100%;
+        text-align: center;
+        height: auto;
+        justify-content: space-between;
+        padding-left: 20px;
+        gap: 20px;
+    }
+
+    .cnt {
+        display: flex;
+      justify-content: space-between;
+        margin: 13px;
+    }
+
+    .cnt h4 {
+        font-family: poppins, sans-serif;
+        font-weight: 700;
+        padding-top: 8px;
+    }
+
+    .btn3 {
+        padding: 12px 20px;
+        border: none;
+        font-size: 15px;
+        color: white;
+        cursor: pointer;
+        background-color: #da5c08fd;
+        font-weight: 500;
+        border-radius: 10px;
+        font-family: poppins, sans-serif;
+    }
+    #feature {
+        margin: 10px;
+    }
+
+    #feature h2 {
+        padding-bottom: 20px;
+        font-family: poppins, sans-serif;
+        font-weight: 600;
+        font-size: 25px;
+        padding-left: 30px;
+    }
+
+    .features {
+        display: flex;
+
+    }
+
+    .card1 {
+        width: 100%;
+        gap: 30px;
+        background: white;
+        border-radius: 10px;
+        /* padding-left: 10px; */
+        font-size: 18px;
+         border: 2px solid rgb(233, 232, 232);
+        overflow: hidden;
+        /* box-shadow: 0 4px 15px rgba(0,0,0,0.2); */
+        /* border: 5px solid black; */
+    }
+
+    .card1 img {
+        border-radius: 10px;
+        padding-bottom: 15px;
+    }
+    
+
+    .card_content h3 {
+        font-family: poppins, sans-serif;
+        font-weight: 600;
+        padding-left: 5px;
+        font-size: 24px;
+    }
+
+    .card_content p {
+        font-family: poppins, sans-serif;
+        font-size: 14px;
+        font-weight: 300;
+        letter-spacing: 1px;
+        padding-left: 5px;
+    }
+
+    .cardss {
+        display: flex;
+        width: 100%;
+        height: auto;
+        justify-content: space-between;
+        padding-left: 20px;
+        gap: 20px;
+    }
+
+    .cnt {
+        display: flex;
+      justify-content: space-between;
+        margin: 13px;
+    }
+
+    .cnt h4 {
+        font-family: poppins, sans-serif;
+        font-weight: 700;
+        padding-top: 8px;
+    }
+
+    .btn3 {
+        padding: 12px 20px;
+        border: none;
+        font-size: 15px;
+        color: white;
+        cursor: pointer;
+        background-color: #da5c08fd;
+        font-weight: 500;
+        border-radius: 10px;
+        font-family: poppins, sans-serif;
+    }
+
+    .delivery {
+        display: flex;
+        justify-content: space-between;
+        padding-left: 120px;
+        padding-right: 110px;
+    }
+
+    #delivery h2 {
+        /* padding-left: 80px; */
+        padding-top: 100px;
+        font-weight: 500;
+        text-align: center;
+        font-size: 35px;
+        text-transform: capitalize;
+        font-family: poppins, sans-serif;
+    }
+
+    .delivery h3 {
+        font-family: poppins, sans-serif;
+        text-transform: capitalize;
+        font-weight: 400;
+        letter-spacing: 1px;
+    }
+    /* .fotterrr{
+ height: auto;
+    } */
+
+    .footer {
+
+        padding: 90px;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 90px;
+        background: linear-gradient(to right,
+                #ff6b4a 0%,
+                #ff8c42 25%,
+                #9acd32 60%,
+                #42d4c8 100%);
+    }
+   
+
+    .company ul li {
+        font-family: poppins, sans-serif;
+        font-size: 20px;
+        list-style: none;
+        color: white;
+        padding: 5px;
+        text-transform: capitalize;
+        font-weight: 400;
+    }
+
+    .company p{
+        font-family: poppins,sans-serif;
+        font-size: 20px;
+        text-transform: capitalize;
+        color: white;
+font-weight: 400;
+}
+
+.sandwich{
+    text-align: center;
+}
+.fries{
+    text-align: center;
+}
+.pizza{
+text-align: center;
+}
+.card_contenttt h3{
+    padding-top: 20px;
+    font-family: poppins, sans-serif;
+        font-weight: 600;
+         font-size: 24px;
+}
+.card_contentt p {
+        font-family: poppins, sans-serif;
+        font-size: 14px;
+        font-weight: 300;
+        letter-spacing: 1px;
+        padding-left: 5px;
+    }
+
+    .card_contenttt p {
+        font-family: poppins, sans-serif;
+        font-size: 14px;
+        font-weight: 300;
+        letter-spacing: 1px;
+        padding-left: 5px;
+    }
+#menu{
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+}
+@media(max-width:768px){
+#logo {
+        display: flex;
+        justify-content: space-between;
+        margin: 1px 5px;
+    }
+
+#menu{
+    display: block;
+    padding-left: 100px;
+    padding-top: 25px;
+    font-size: 20px;
+    
+   
+}
+#banner {
+    height: 180px;;
+}
+#banner img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.nav{
+    display: none;
+}
+.nav_links{
+     position: absolute;
+    top: 70px;
+    display: none;
+    right: 10px;
+    background-color: white;
+    width: 200px;
+    flex-direction: column;
+    padding: 20px;
+}
+/* .nav ul.active{
+    display: flex;
+} */
+
+.btn1, .btn2 {
+        display: none;
+    }
+ 
+.Explore {
+        position:absolute;
+        top:15%;
+    }
+
+    .Explore h1 {
+        font-family: Poppins, sans-serif;
+        font-weight: 600;
+        /* text-transform: capitalize; */
+        font-size: 15px;
+        margin-left: 5px;
+    }
+
+    .Explore p {
+        margin-left: 5px;
+        font-size: 7px;
+        padding-bottom: 5px;
+        font-family: poppins, sans-serif;
+        font-weight: 400;
+    }
+    *{
+        padding: 0;
+        margin: 0;
+    }
+
+    .explore {
+        margin-left: 5px;
+        padding: 0;
+        padding: 4px 10px;
+        border-radius: 5px;
+        /* padding-top: 10px; */
+        text-transform: capitalize;
+        font-size: 10px;
+        border: 1px solid rgb(233, 226, 226);
+        color: white;
+        cursor: pointer;
+        display: inline-block;
+        width: fit-content;
+        font-weight: 300;
+        background-color: #da5c08fd;
+        font-family: poppins, sans-serif;
+    }
+    button{
+        padding-top: 0;
+        margin-top: 0;
+    }
+    .banner img{
+        width: 100%;
+        height: auto;
+    }
+    .feature h3 {
+        margin-left: 30px;
+        font-family: poppins, sans-serif;
+        font-weight: 600;
+        font-size: 20px;
+        margin-top: 25px;
+    }
+     .featuree {
+        /* display: flex; */
+        justify-content: space-between;
+        margin: 10px;
+        flex-direction: column;
+    }
+
+    
+    
+
+    #featuree h2 {
+        padding-bottom: 20px;
+        font-family: poppins, sans-serif;
+        font-weight: 600;
+        font-size: 20px;
+        padding-left: 20px;
+    }
+#feature h2 {
+        padding-bottom: 2px;
+        padding-top: 20px;
+        text-align: center;
+        font-family: poppins, sans-serif;
+        font-weight: 600;
+        font-size: 25px;
+        padding-left: 5px;
+    }
+
+    .features {
+        display: flex;
+
+    }
+
+    .card1 {
+        width: 100%;
+        max-width: 320px;
+        background: white;
+        border-radius: 15px;
+margin: 0px;
+        padding-left: 0px;
+        font-size: 18px;
+        overflow: hidden;
+        /* box-shadow: 0 4px 15px rgba(0,0,0,0.2); */
+        /* border: 5px solid black; */
+    }
+#logo{
+    width: 180;overflow: hidden;
+}
+
+
+    .card1 img {
+        border-radius: 10px;
+        padding-bottom: 15px;
+        width: 100%;
+        height: auto;
+    }
+.card11 img {
+        border-radius: 10px;
+        padding-bottom: 15px;
+        width: 100%;
+        height: auto;
+    }
+
+    .card_content h3 {
+        font-family: poppins, sans-serif;
+        font-weight: 450;
+        font-size: 16px;
+    }
+   .card_contentt h3 {
+        font-family: poppins, sans-serif;
+        font-weight: 450;
+         }
+    .card_content p {
+        font-family: poppins, sans-serif;
+        font-size: 12px;
+    }
+    .cardsss {
+        flex-direction: column;
+        /* gap: 20px; */
+        align-items: center;
+        /* display: flex; */
+        justify-content: space-between;
+        padding-left: 1px;
+    }
+
+
+    .cardss {
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+        /* display: flex; */
+        justify-content: space-between;
+        padding-left: 1px;
+    }
+
+    .cnt {
+        display: flex;
+        gap: 70px;
+        padding-top: 15px;
+    }
+
+    .cnt h4 {
+        font-family: poppins, sans-serif;
+        font-weight: 700;
+        padding-top: 8px;
+    }
+
+    .btn3 {
+        padding: 12px 20px;
+        border: none;
+        font-size: 12px;
+        color: white;
+        cursor: pointer;
+        background-color: #da5c08fd;
+        font-weight: 500;
+        border-radius: 10px;
+        font-family: poppins, sans-serif;
+    }
+
+    .delivery {
+        /* display: flex; */
+        flex-direction: column;
+        justify-content: space-between;
+        text-align: center;
+        padding-left: 13px;
+        padding-right: 10px;
+    }
+
+    #delivery h2 {
+        /* padding-left: 80px; */
+        padding-top: 50px;
+        font-weight: 500;
+        text-align: center;
+        /* gap:5px; */
+        font-size: 25px;
+        text-transform: capitalize;
+        font-family: poppins, sans-serif;
+    }
+
+    .delivery h3 {
+        font-family: poppins, sans-serif;
+        text-transform: capitalize;
+        font-weight: 400;
+        font-size: 15px;
+        letter-spacing: none;
+    }
+
+    .ways img{
+        width: 80%;
+        height: 80%;
+    }
+    .card111{
+         border-radius: 10px;
+        padding-bottom: 15px;
+        width: 100%;
+        height: auto;
+    }
+
+.footer {
+
+        padding: 20px;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 90px;
+        background: linear-gradient(to right,
+                #ff6b4a 0%,
+                #ff8c42 25%,
+                #9acd32 60%,
+                #42d4c8 100%);
+    }
+    .company ul li {
+        font-family: poppins, sans-serif;
+        font-size: 14px;
+        list-style: none;
+        color: white;
+        padding: 5px;
+        text-transform: capitalize;
+        font-weight: 400;
+    }
+
+    .company p{
+        font-family: poppins,sans-serif;
+        font-size: 14px;
+        text-transform: capitalize;
+        color: white;
+font-weight: 400;
+}
+.card11 img{
+    width: 100%;
+height: auto;
+}
+.card111 img{
+    width: 100%;
+    height: auto;
+}
+
+}
+
+
+
+
+
+</style>
+
+<body>
+    <!--Navbar- -->
+    <div id="logo">
+        <img src="./Assets/logo.png" alt="" height="60px">
+<i class="fa-solid fa-bars" id="menu" onclick="toggleMenu()"style="color: rgb(11, 10, 10);"></i>
+        <div class="nav" id="nav">
+            <ul class="nav_links">
+                <li><a href="#banner">Home</a></li>
+                <li><a href="#categories">Our Menu</a></li>
+                <li><a href="#feature">Offer</a></li>
+                <li><a href="#delivery">Contact Us</a></li>
+            </ul>
+        </div>
+
+        <div class="buttongroups">
+            <button class="btn1"><strong>Log In</strong> </button>
+            <button class="btn2">order now </button>
+        </div>
+    </div>
+    <!-- banner -->
+    <div id="banner">
+        <img src="./Assets/gemini.png" alt="" height="100%" width="100%">
+
+        <div class="Explore">
+            <h1>
+                Delicious Meals,<br> Delivered to Your Door
+            </h1>
+
+            <p>
+                Explore a wide range of fresh, chef-prepared dishes <br>with lightning-fast delivery across
+                Pakistan.
+            </p>
+
+            <button class=" explore"><strong>Explore menu</strong> </button>
+        </div>
+    </div>
+    <!-- categories -->
+   <div id="featuree">
+        <h2>Popular Categories</h2>
+        <div class="featuress">
+            <div class="cardsss">
+                <div class="card11">
+                    <img src="./Assets/burger.png" alt="" width="400px" height="auto">
+                    <div class="card_contentt">
+                        <h3>Burger & Sandwich</h3>
+                        <p>Juicy patties, fresh toppings</p>
+                    </div>
+
+
+                </div>
+
+
+                <div class="card11">
+                    <img src="./Assets/burger.png" alt="" width="400px" height="auto">
+                    <div class="card_content">
+                        <h3>Pizza & pasta</h3>
+                        <p>Chessy goodness,authentic <br>flavers</p>
+                    </div>
+                 
+                </div>
+
+
+                <div class="card111">
+                    <img src="./Assets/burger.png" alt="" width="400px" height="auto">
+                    <div class="card_contentt">
+                        <h3>local Favorites</h3>
+                        <p>Biryani,Nihari,Karahi</p>
+                    </div>
+                  
+                </div>
+
+                <div class="card11">
+                    <img src="./Assets/burger.png" alt="" width="400px" height="auto">
+                    <div class="card_contentt">
+                        <h3>Healthy choices</h3>
+                        <p>Salads,bowls,guilt-free eats</p>
+                    </div>
+                   
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Features  -->
+    <div id="feature">
+        <h2>Featured dishes</h2>
+        <div class="features">
+            <div class="cardss">
+                <div class="card1">
+                    <img src="./Assets/karhi 1.jpeg" alt="" width="100%" height="300px">
+                    <div class="card_content">
+                        <h3>Special Chicken karahi</h3>
+                        <p>Rich tomato and green chill</p>
+                    </div>
+                    <div class="cnt">
+                        <h4>PKR 1250</h4>
+                        <button class="btn3" onclick="addToCart()">Add to Card</button>
+                    </div>
+
+                </div>
+
+
+                <div class="card1">
+                    <img src="./Assets/pizza 2.jpeg" alt="" width="100%" height="300px">
+                    <div class="card_content">
+                        <h3>Chessy loaded pizza</h3>
+                        <p>Mozzarella,pepperoni,peppers</p>
+                    </div>
+                    <div class="cnt">
+                        <h4>PKR 1250</h4>
+                        <button class="btn3" onclick="addToCart()">Add to Card</button>
+                    </div>
+                </div>
+
+
+                <div class="card1">
+                    <img src="./Assets/chn br.jpeg" alt="" width="100%" height="300px">
+                    <div class="card_content">
+                        <h3>local Favorites</h3>
+                        <p>Biryani,Nihari,Karahi</p>
+                    </div>
+                    <div class="cnt">
+                        <h4>PKR 1250</h4>
+                        <button class="btn3" onclick="addToCart()">Add to Card</button>
+                    </div>
+                </div>
+
+                <div class="card1">
+                    <img src="./Assets/hcc.jpeg " alt="" width="100%" height="300px">
+                    <div class="card_content">
+                        <h3>Healthy choices</h3>
+                        <p>Salads,bowls,guilt-free eats</p>
+                    </div>
+                    <div class="cnt">
+                        <h4>PKR 1250</h4>
+                        <button class="btn3" onclick="addToCart()">Add to card</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+ 
+    <!-- footer -->
+    <footer>
+        <div id="delivery">
+            <h2>How it works</h2>
+            <div class="delivery">
+                <div class="ways">
+                    <img src="./Assets/brgn.jpeg" alt="" height="120px" width="130px">
+                    <h3>1. choose your meal</h3>
+                </div>
+
+                <div class="ways">
+                    <img src="./Assets/lock.jpeg" alt="" height="120px" width="130px">
+                    <h3>2. secure payment</h3>
+                </div>
+                <div class="ways">
+                    <img src="./Assets/rder.jpeg" alt="" height="120px" width="130px">
+                    <h3>3. enjoy fast delievery</h3>
+                </div>
+            </div>
+        </div>
+<div class="fotterrr">
+ <div class="footer">
+            <div class="company">
+                <ul>
+                    <li>company</li>
+                    <li>about</li>
+                    <li>careers</li>
+                </ul>
+            </div>
+            <div class="company">
+                <ul>
+                    <li>Support</li>
+                    <li>FAQs</li>
+                    <li>contact</li>
+                </ul>
+            </div>
+
+            <div class="company">
+                <p>Social</p>
+               <ul>
+                        <li><i class="fa-brands fa-facebook" style="color: rgb(253, 252, 252);"></i></li>
+                        <li><i class="fa-brands fa-instagram" style="color: rgb(255, 254, 254);"></i></li>
+                        <li><i class="fa-brands fa-twitter" style="color:rgb(248, 245, 245);"></i></li>
+                    </ul>
+
+            </div>
+
+            
+        </div>
+
+</div>
+       
+
+  
+      
+
+    </footer>
+
+
+
+
+
+
+
+    <script>
+        let cart = 0;
+
+        function addToCart() {
+            cart++;
+            alert(cart);
+        }
+
+function toggleMenu() {
+    document.getElementById("nav").classList.toggle("active");
+}
+
+    </script>
+</body>
+
+</html>
